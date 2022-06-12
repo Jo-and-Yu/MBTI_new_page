@@ -177,7 +177,7 @@
                     </div>
                 </div>
                 <div class="hairs swiper-slide" >
-                    <img src="images/hairs.gif" class="peoplemove">
+                    <img src="images/hairs.gif" class="peoplemove hairs">
                     <div class="content">
                         <h1>HAIR</h1>
                         <p>머리는 다양한 스타일이 있으며, 지구인 스타일을 참고함.</p>
@@ -194,8 +194,15 @@
                         <p>표정은 눈, 눈썹, 입술, 코 4가지 요소로 표현함</p>
                     </div>
                 </div>
+                <div class="accs swiper-slide" >
+                    <img src="images/accs.gif" class="peoplemove accimg">
+                    <div class="content">
+                        <h1>ACCESSORY</h1>
+                        <p>악세사리는 비트코인 귀걸이, 이더리움 귀걸이, 안경, 마스크, 주근깨, 뾰루지가 있다.</p>
+                    </div>
+                </div>
                 <div class="backgrounds swiper-slide" >
-                    <img src="images/backgrounds.gif" class="peoplemove">
+                    <img src="images/backgrounds.gif" class="peoplemove bgimg">
                     <div class="content">
                         <h1>BACKGROUND</h1>
                         <p>배경에는 단색과 그라데이션이 있다.</p>
@@ -208,7 +215,6 @@
         <div class="swiper-button-next2"></div>
         <h2>COMING SOON</h2>
         <br>
-        <img src="images/faces.gif" class="v2">
     </div>
 
     <!-- 유틸리티(utility) -->
@@ -427,6 +433,7 @@
                 deplay: 1000,
                 disableOnInteraction: false,
             },
+            loop: true,
         });
     </script>
         <!-- 슬라이드2 -->
@@ -434,7 +441,7 @@
         const swiper2 = new Swiper('.swiper-container2', {
             grabCursor: true,
             slidesPerView: 'auto',
-            spaceBetween: 50,
+            spaceBetween: 40,
             navigation : {
             nextEl : '.swiper-button-next2',
             prevEl : '.swiper-button-prev2',
@@ -443,6 +450,7 @@
             //     deplay: 1000,
             //     disableOnInteraction: false,
             // },
+            // loop: true,
         });
     </script>
     <script>
