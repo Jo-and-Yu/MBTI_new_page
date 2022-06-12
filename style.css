@@ -1,0 +1,587 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+
+:root {
+  --storybg: #1c0522;
+  --aboutbg: #120522;
+  --slide: #120522;
+  --roadmapbg: #2b1842;
+  --teambg: #120522;
+  --partnerbg: #302145;
+  --utilitybg: #0d0518;
+}
+
+/* 전체 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+/* body */
+body {
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(#18062e, #cd95da);
+}
+
+/* 메뉴바 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+  background-color: rgba(39, 12, 74, 0.5);
+}
+#logo {
+  height: 50px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  list-style: none;
+  margin-left: 10px;
+}
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active {
+  background: #fff;
+  color: #2b1055;
+}
+
+/* 시작 화면 */
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, var(--storybg), transparent);
+  z-index: 1000;
+}
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+section img#moon {
+  /* mix-blend-mode: screen; */
+}
+section img#mountains_front {
+  z-index: 10;
+}
+#text {
+  position: absolute;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+  right: -350px;
+}
+#btn {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: var(--storybg);
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(100px);
+}
+
+/* 스토리 소개란 */
+.sec {
+  padding: 100px;
+  background: var(--storybg);
+  text-align: center;
+  overflow: hidden;
+}
+.sec h2 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.sec h3 {
+  font-size: 1.8em;
+  font-weight: 20;
+  color: #fff;
+}
+#mascot {
+  position: relative;
+  width: 20%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+/* 캐릭터 소개란 */
+.about {
+  padding: 100px;
+  background: var(--aboutbg);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.about h2 {
+  font-size: 3.5em;
+  color: #fff;
+}
+/* 각 슬라이드 설정 */
+.about .swiper-slide:hover {
+  cursor: pointer;
+}
+
+.about .swiper-slide .content {
+  color: var(--slide);
+  text-align: center;
+  margin-top: 45%;
+}
+
+.about .swiper-slide:active .content {
+  color: #f2eef8;
+}
+
+.about .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 240px;
+  height: 240px;
+  background: var(--slide);
+}
+/* mbti */
+.about .swiper-container1 {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  color: #fff;
+}
+/* v1 */
+.about .swiper-container2 {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #fff;
+}
+
+.about .face {
+  background-position: center;
+  background-size: cover;
+  width: 200px;
+  height: 210px;
+  /* background: var(--slide); */
+}
+.about .face .content {
+  margin-top: 55%;
+}
+
+.about .hairs {
+  background-position: center;
+  background-size: cover;
+  width: 290px;
+  height: 330px;
+  /* background: var(--slide); */
+}
+.about .hairs .content {
+  margin-top: 35%;
+}
+.about .looks {
+  background-position: center;
+  background-size: cover;
+  width: 180px;
+  height: 185px;
+}
+.about .looks .content {
+  margin-top: 60%;
+}
+/* 눈코입 각 이미지 */
+.about .swiper-slide .look .peoplemove {
+  background: none;
+}
+/* 눈코입 제일 밑에 이미지 */
+.about .swiper-slide .look .lookbase {
+  background: #f8e4c3;
+  border-radius: 50%;
+}
+/* mbti 각 슬라이드 */
+.about .swiper-slide .mbti {
+  position: absolute;
+  /* background: var(--slide); */
+  width: 100%;
+  height: 100%;
+}
+
+.about .swiper-slide:active .mbti {
+  top: 20px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #fefefe;
+}
+/* v1 각 슬라이드 */
+.about .swiper-slide .peoplemove {
+  position: absolute;
+  /* background: var(--slide); */
+  width: 100%;
+  height: 100%;
+}
+
+.about .swiper-slide:active .peoplemove {
+  top: 20px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+/* v2 이미지 */
+.about .v2 {
+  width: 200px;
+  height: 210px;
+}
+
+/* 로드맵(roadmap) */
+.roadmap {
+  padding: 150px;
+  background: var(--roadmapbg);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.roadmap h2 {
+  font-size: 3.5em;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 4.9rem;
+}
+
+.roadmap .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1.8rem;
+}
+
+.roadmap .box-container .box {
+  padding: 1.4rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0.5rem 1rem rgb(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  background-color: #fff;
+}
+.roadmap .box-container .box:hover {
+  cursor: pointer;
+  transform: scale(1.05, 1.05);
+  transition: 0.5s;
+}
+
+.roadmap .box-container .box h3 {
+  font-size: 2.1em;
+  letter-spacing: 0.05em;
+  color: var(--roadmapbg);
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.roadmap .box-container .box .content {
+  font-size: 1.3em;
+  letter-spacing: 0.09em;
+  margin-bottom: 20px;
+  font-weight: 345;
+}
+
+.roadmap .box-container .box .start {
+  font-size: 1.1em;
+  font-weight: 520;
+  letter-spacing: 0.5em;
+  color: rgb(255, 255, 255);
+
+  margin-top: 15px;
+  margin-bottom: -5px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 7px 25px;
+  background: var(--roadmapbg);
+  border-radius: 1.6rem;
+  border: 0.2rem solid rgba(132, 68, 126, 0.2);
+}
+
+/* 팀소개(team) */
+.team {
+  padding: 100px;
+  background: var(--teambg);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.team h2 {
+  text-align: center;
+  font-size: 3.5em;
+  position: relative;
+  color: #fff;
+}
+
+.team-box {
+  padding-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 0.4fr));
+  gap: 4rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.team-member {
+  padding: 2rem 0;
+  border-radius: 2rem;
+  border: 0.2rem solid rgba(80, 66, 123, 0.2);
+  box-shadow: 0.5rem 1rem rgb(0, 0, 0, 0.1);
+}
+
+.team-member .content h1 {
+  padding: 0.9rem;
+  color: #fff;
+}
+
+.team-member .content p {
+  color: #fff;
+  padding: 0.4rem;
+}
+
+.team img {
+  padding-top: 0.5rem;
+  border-radius: 1.5rem;
+  border: 0.1rem;
+  box-shadow: 0.5rem 1rem rgb(0, 0, 0, 0.1);
+}
+
+/* 파트너(partner) */
+
+.partnerships {
+  padding: 40px;
+  background: var(--partnerbg);
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.partnerships .header {
+  margin-bottom: 15px;
+}
+
+.partnerships .header h2 {
+  text-align: center;
+  font-size: 2.5em;
+  position: relative;
+  color: #fff;
+}
+.partnerships .row {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  
+/* 유틸리티(utility) */
+
+.utility
+{
+    padding: 100px;
+    background: var(--utilitybg);
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.utility .cardbox
+{
+    display: flex;
+}
+
+.utility h2 {
+    font-size: 3.5em;
+    margin-bottom: 100px;
+    color: #fff;
+    text-align: center;
+  }
+.card
+{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    background: none;
+    border-radius: 20px; 
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    transition: 0.5s;
+    margin-bottom: 70px;
+}
+.card:hover
+{
+  cursor: pointer;
+}
+#card1
+{
+    z-index: 1;
+}
+
+.card .circle
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card .circle::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #271640;
+    clip-path: circle(170px at center);
+    transition: 0.5s;
+}
+
+.card:hover .circle:before
+{
+    background: #422b67;
+    clip-path: circle(400px at center);
+}
+
+.card img
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 390px;
+    pointer-events: none;
+    transition: 0.5s;
+
+    padding: 1.4rem 1.3rem;
+    border-radius: 2rem;
+    border: 0.2rem solid rgba(79, 56, 111, 0.2);
+    box-shadow: -0.7rem 1rem rgb(0, 0, 0, 0.1);
+}
+.card:hover img
+{
+    left: 80%;
+    height: 400px;
+    padding: .5rem;
+    border: 0.2rem solid rgba(255, 255, 255, 0.4);
+}
+
+.card .content
+{
+    position: relative;
+    width: 50%;
+    left: 20px;
+    padding: 20px 20px 20px 40px;
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.card:hover .content
+{
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+.card .content h2
+{
+    color: #fff;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 1.5em;
+    text-align: left;
+}
+.card .content p
+{
+    color: #fff;
+    letter-spacing: .15em; 
+    word-spacing: .05em
+}
+
+@media (max-width: 991px)
+{
+    .card
+    {
+        width: auto;
+        max-width: 350px;
+        align-items: flex-start;
+        margin: 10px;
+        margin-bottom: 100px;
+    }
+    .card:hover
+    {
+        height: 600px;
+    }
+    .card .content
+    {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+    .card:hover img
+    {
+        top: 70%;
+        left: 50%;
+        height: 300px;
+    }
+    .utility .cardbox
+    {
+        display:grid;
+    }
+}
+@media (max-width: 420px)
+{
+    .card .content
+    {
+        padding: 20px;
+        margin-bottom: 100px;
+    }
+}
