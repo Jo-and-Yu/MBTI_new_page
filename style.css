@@ -210,7 +210,7 @@ section img#mountains_front {
 .about .hairs {
   background-position: center;
   background-size: cover;
-  width: 290px;
+  width: 250px;
   height: 330px;
   /* background: var(--slide); */
 }
@@ -225,6 +225,11 @@ section img#mountains_front {
 }
 .about .looks .content {
   margin-top: 60%;
+}
+
+.about .backgrounds {
+  width: 210px;
+  height: 240px;
 }
 /* 눈코입 각 이미지 */
 .about .swiper-slide .look .peoplemove {
