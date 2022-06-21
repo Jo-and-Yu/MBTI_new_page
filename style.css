@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
 
 :root {
-  --storybg: #1c0522;
+  --storybg: #120522;
   --aboutbg: #120522;
   --slide: #120522;
   --roadmapbg: #2b1842;
   --teambg: #120522;
   --partnerbg: #302145;
-  --utilitybg: #0d0518;
-  --contactbg: #351e6a;
+  --utilitybg:  #120522;
+  --contactbg: #302145;
+
+  --btnbg: #120522;
+  --btnhoverbg: #9186a9;
+  --btnshadow: #07020d;
+  --btnhovershadow: #34284f;
 }
 
 /* 전체 */
@@ -160,38 +165,38 @@ section img#mountains_front {
   border-radius: 40px;
   transition: all 0.3s;
   cursor: pointer;
+  border: solid 1px #fff;
 }
 .utilityBtn {
   margin-top: 30px;
   margin-left: -10px;
   margin-bottom: 0;
   background: #19083b;
-  box-shadow: 0px 5px 0px 0px #2f186d;
+  box-shadow: 0px 5px 0px 0px #160c32;
   width: 110px;
   line-height: 35px;
   font-size: 1.1em;
   border-radius: 50px;
 }
 .utilityBtn:hover {
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-top: 40px;
   box-shadow: 0px 0px 0px 0px #2f186d;
 }
 .openseaBtn {
-  background: #19083b;
-  box-shadow: 0px 8px 0px 0px #2f186d;
+  background: var(--btnbg);
+  box-shadow: 0px 8px 0px 0px var(--btnshadow);
 }
 .mintingBtn {
-  background: #19083b;
-  box-shadow: 0px 8px 0px 0px #2f186d;
+  background: var(--btnbg);
+  box-shadow: 0px 8px 0px 0px var(--btnshadow);
 }
 .openseaBtn:hover {
-  background: #856bcc;
-  box-shadow: 0px 2px 0px 0px #bfabf7;
+  background: var(--btnhoverbg);
+  box-shadow: 0px 2px 0px 0px var(--btnhovershadow);
 }
 .mintingBtn:hover {
-  background: #856bcc;
-  box-shadow: 0px 2px 0px 0px #bfabf7;
+  background: var(--btnhoverbg);
+  box-shadow: 0px 2px 0px 0px var(--btnhovershadow);
 }
 
 /* 캐릭터 소개란 */
