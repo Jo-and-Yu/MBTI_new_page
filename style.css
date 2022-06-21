@@ -8,6 +8,7 @@
   --teambg: #120522;
   --partnerbg: #302145;
   --utilitybg: #0d0518;
+  --contactbg: #351e6a;
 }
 
 /* 전체 */
@@ -588,4 +589,13 @@ section img#mountains_front {
     padding: 20px;
     margin-bottom: 100px;
   }
+}
+
+/* 제휴및 문의 */
+
+.contact {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--contactbg);
+  color: white;
 }
