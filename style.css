@@ -7,7 +7,7 @@
   --roadmapbg: #2b1842;
   --teambg: #120522;
   --partnerbg: #302145;
-  --utilitybg:  #120522;
+  --utilitybg: #120522;
   --contactbg: #302145;
 
   --btnbg: #120522;
@@ -407,7 +407,7 @@ section img#mountains_front {
 .roadmap .box-container .box .start {
   font-size: 1.1em;
   font-weight: 520;
-  letter-spacing: 0.5em;
+  /* letter-spacing: 0.5em; */
   color: rgb(255, 255, 255);
 
   margin-top: 15px;
